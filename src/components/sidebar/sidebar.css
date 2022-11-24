@@ -1,0 +1,25 @@
+.sidebar__layout {
+    background: #F8F9FA !important;
+    flex: 0 0 250px !important; 
+    max-width: 250px !important; 
+    min-width: 250px !important; 
+    width: 250px !important;
+  }
+
+#components-layout-demo-responsive .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .site-layout-sub-header-background {
+    background: #F8F9FA;
+  }
+  
+  .site-layout-background {
+    background: #F8F9FA;
+  }
+
+  .sidebar__layout-menu {
+    background: #F8F9FA;
+  }
