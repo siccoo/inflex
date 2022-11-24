@@ -36,8 +36,8 @@ const Sidebar = () => (
       }}
       className="sidebar__layout"
     >
-      <div className="logo" style={{ padding: 10 }}>
-        <img src={VandelayLogo} alt="" />
+      <div className="logo" style={{ padding: 5 }}>
+        <img src={VandelayLogo} className="vanLogo" alt="" />
       </div>
 
       <hr

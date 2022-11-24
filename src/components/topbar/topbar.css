@@ -1,0 +1,8 @@
+.site-layout-sub-header-background .breadcrumb {
+    list-style: none;
+    padding: 10px 5px;
+}
+
+.site-layout-sub-header-background .topbar_right {
+    display: flex;
+}
