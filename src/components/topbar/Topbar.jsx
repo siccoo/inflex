@@ -19,6 +19,7 @@ const Topbar = () => {
         // justifyContent: "space-between"
       }}
     >
+      <div className="topbar">
       <div>
         <ul class="breadcrumb">
           <li>
@@ -32,11 +33,11 @@ const Topbar = () => {
       <div className="topbar_right">
         <div className="item">
           <div className="search">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Type here..." />
           </div>
         </div>
         <div className="item">
-          <img src={SigninImg} alt="" style={{ width: 15, height: 15 }} />
+          <img src={SigninImg} cla alt="" style={{ width: 15, height: 15 }} />
           <p>Sign In</p>
         </div>
         <div className="item">
@@ -45,6 +46,7 @@ const Topbar = () => {
         <div className="item">
           <img src={NotificationImg} alt="" style={{ width: 15, height: 15 }} />
         </div>
+      </div>
       </div>
     </Header>
   );
