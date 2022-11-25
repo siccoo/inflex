@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Breadcrumb } from "antd";
+import { Layout } from "antd";
 
 import SigninImg from "../../assets/img/topbarSignin.png";
 import NotificationImg from "../../assets/img/notification.png";
@@ -23,10 +23,10 @@ const Topbar = () => {
       <div>
         <ul class="breadcrumb">
           <li>
-            <a href="/">Home</a>
+            <a href="/">Pages</a>
           </li>
           <li>
-            <a href="/">Pictures</a>
+            <a className="breadcrumb_main" href="/">Tables</a>
           </li>
         </ul>
       </div>

@@ -24,7 +24,7 @@ const columns = [
     key: "author",
     render: (text, row) => {
       return (
-        <span style={{display: "flex", }}>
+        <span style={{display: "flex", marginBottom: "0px",  }}>
         <img src={row.imgData} className="table_img" alt="" />{" "} <p>{text} <br /><small className="table_email">{row.email}</small></p>
         </span>
       )
@@ -134,9 +134,9 @@ const data = [
 
 const columnsOne = [
   {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
+    title: "companies",
+    dataIndex: "companies",
+    key: "companies",
     render: (text) => <a href="/">{text}</a>,
   },
   {
