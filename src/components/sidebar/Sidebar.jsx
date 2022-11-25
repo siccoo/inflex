@@ -3,13 +3,13 @@ import { Layout, Menu } from "antd";
 
 import VandelayLogo from "../../assets/img/Logo.png";
 import QuestionImg from "../../assets/img/questionImg.png";
-import {ReactComponent as DashboardIcon} from "../../assets/img/dashboard.svg";
-import {ReactComponent as BillingIcon} from "../../assets/img/billing.svg";
-import {ReactComponent as ProfileIcon} from "../../assets/img/profile.svg";
-import {ReactComponent as RTLIcon} from "../../assets/img/rtl.svg";
-import {ReactComponent as SigninIcon} from "../../assets/img/signin.svg";
-import {ReactComponent as SignupIcon} from "../../assets/img/signup.svg";
-import {ReactComponent as TablesIcon} from "../../assets/img/tables.svg";
+import { ReactComponent as DashboardIcon } from "../../assets/img/dashboard.svg";
+import { ReactComponent as BillingIcon } from "../../assets/img/billing.svg";
+import { ReactComponent as ProfileIcon } from "../../assets/img/profile.svg";
+import { ReactComponent as RTLIcon } from "../../assets/img/rtl.svg";
+import { ReactComponent as SigninIcon } from "../../assets/img/signin.svg";
+import { ReactComponent as SignupIcon } from "../../assets/img/signup.svg";
+import { ReactComponent as TablesIcon } from "../../assets/img/tables.svg";
 
 import "./sidebar.css";
 import Topbar from "../topbar/Topbar";
@@ -17,7 +17,7 @@ import Bottom from "../bottom/Bottom";
 
 const { Content, Sider } = Layout;
 
-const Sidebar = () => (
+const Sidebar = ({ children }) => (
   <Layout
     style={{
       height: "100vh",
@@ -40,7 +40,7 @@ const Sidebar = () => (
         <img src={VandelayLogo} className="vanLogo" alt="" />
       </div>
 
-      <hr
+      {/* <hr
         className="line"
         style={{
           width: "233.25px",
@@ -48,9 +48,9 @@ const Sidebar = () => (
           left: "24.5px",
           top: "94.5px",
           color: "#e0e1e2",
-          background: "#e0e1e2"
+          background: "#e0e1e2",
         }}
-      />
+      /> */}
       <Menu
         className="sidebar__layout-menu"
         mode="inline"
@@ -106,8 +106,8 @@ const Sidebar = () => (
             padding: "7px",
           }}
         />
-        <p>Need help?</p>
-        <p>Please check our docs</p>
+        <p className="need_help">Need help?</p>
+        <p className="document">Please check our docs</p>
         <span
           style={{
             background: "#ffffff",
@@ -129,17 +129,17 @@ const Sidebar = () => (
       <Topbar />
       <Content
         style={{
-          margin: "24px 16px 0",
+          margin: "0",
         }}
       >
         <div
           className="site-layout-background"
           style={{
-            padding: 24,
+            padding: 5,
             minHeight: 360,
           }}
         >
-          content
+          {children}
         </div>
       </Content>
       <Bottom />

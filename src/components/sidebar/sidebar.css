@@ -8,7 +8,8 @@
 }
 
 .sidebar__layout .vanLogo {
-  width: 150px
+  width: 200px;
+  padding-left: 25px;
 }
 
 .sidebar__layout-box {
@@ -19,6 +20,24 @@
   margin: 20px;
   padding: 10px;
   border-radius: 8px;
+}
+
+.sidebar__layout-box .need_help {
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 140%;
+color: #FFFFFF;
+margin-top: 20px;
+margin-bottom: -2px;
+}
+
+.sidebar__layout-box .document {
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+color: #FFFFFF;
 }
 
 .sidebar__layout-menu {
@@ -48,6 +67,8 @@
   background: #ffffff;
   box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
   border-radius: 15px;
+  width: 219px;
+  margin-left: 10px;
 }
 
 .sidebar__layout-menu .ant-menu-item-selected {
@@ -62,7 +83,24 @@
 .sidebar__layout-menu .ant-menu-item:hover {
   background: #FFFFFF;
 box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-border-radius: 12px;
+border-radius: 15px;
+width: 219px;
+margin-left: 10px;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: white !important;
+}
+
+.ant-menu-inline .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-vertical .ant-menu-item:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-right: none;
+  transform: scaleY(.0001);
+  opacity: 0;
+  transition: transform .15s cubic-bezier(.215,.61,.355,1),opacity .15s cubic-bezier(.215,.61,.355,1);
 }
 
 .sidebar__layout-menu .ant-menu-item:hover svg {
@@ -84,7 +122,8 @@ border-radius: 12px;
 .site-layout-sub-header-background {
   background: #f8f9fa;
 }
-
-.site-layout-background {
-  background: #f8f9fa;
+.ant-layout-content {
+  flex: auto;
+  min-height: 0;
+  background: #F8F9FA;
 }
