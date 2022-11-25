@@ -25,7 +25,7 @@ const columns = [
     render: (text, row) => {
       return (
         <span style={{display: "flex", }}>
-        <img src={row.imgData} className="table_img" alt="" />{" "} <p>{text} <br /><small>{row.email}</small></p>
+        <img src={row.imgData} className="table_img" alt="" />{" "} <p>{text} <br /><small className="table_email">{row.email}</small></p>
         </span>
       )
   },
@@ -38,7 +38,7 @@ const columns = [
       return (
         <span>
           {role}
-          <p>{position.post}</p>
+          <p className="table_post">{position.post}</p>
         </span>
       )
     }
@@ -49,8 +49,9 @@ const columns = [
     dataIndex: "status",
     render: (text) => (
       <>
-        <p >{text}</p>
-      </>
+        <p style={{background: "#48BB78",
+borderRadius: "8px", adding: 5, width: "65px", textAlign: "center", color: "#FFFFFF"}}>{text}</p>
+      </> 
     ),
   },
   {
@@ -111,12 +112,12 @@ const data = [
   },
   {
     key: "5",
-    name: "Frank Costanza",
+    author: "Frank Costanza",
     imgData: ImgFive,
     email: "frank@vandelay.com",
     post: "Developer",
     function: "Programmer",
-    status: "Online",
+    status: "Offline",
     employed: "14/06/21",
   },
   {
@@ -126,7 +127,7 @@ const data = [
     email: "art.ie@vandelay.com",
     post: "UI/UX Design",
     function: "Designer",
-    status: "Online",
+    status: "Offline",
     employed: "14/06/21",
   },
 ];

@@ -134,3 +134,7 @@ margin-left: 10px;
   min-height: 0;
   background: #F8F9FA;
 }
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+  border-right: none;
+}

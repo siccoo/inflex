@@ -1,68 +1,107 @@
 .site-layout-background {
-    background: #f8f9fa;
+  background: #f8f9fa;
 }
 
 .site-layout-background .table {
-    width: 1160px;
-    /* height: 300px; */
-    background: #FFFFFF;
-box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-border-radius: 15px;
-/* margin-top: 15px; */
-margin-bottom: 15px;
+  width: 1160px;
+  /* height: 350px; */
+  background: #ffffff;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+  /* margin-top: 15px; */
+  margin-bottom: 10px;
 }
 
 .site-layout-background .table p span {
-    padding: 10px;
+  padding: 10px;
 }
 
 .ant-table-pagination.ant-pagination {
-    margin: 16px 0;
-    display: none;
+  margin: 16px 0;
+  display: none;
 }
 
-.ant-table-tbody>tr>td, .ant-table-thead>tr>th, .ant-table tfoot>tr>td, .ant-table tfoot>tr>th {
-    position: relative;
-    padding: 5px;
-    overflow-wrap: break-word;
+.ant-table-tbody > tr > td,
+.ant-table-thead > tr > th,
+.ant-table tfoot > tr > td,
+.ant-table tfoot > tr > th {
+  position: relative;
+  padding: 5px;
+  overflow-wrap: break-word;
 }
 
 .table_img {
-    border-radius: 8px;
-    width: 30px;
-    height: 30px;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
 }
 
 th.ant-table-cell {
-    background: none !important;
-    font-family: 'Helvetica';
-font-style: normal;
-font-weight: 700;
-font-size: 10px;
-line-height: 150%;
-color: #A0AEC0 !important;
-    text-transform: uppercase;
-  }
-
-  .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 1px;
-    height: 1.6em;
-    /* background-color: rgba(0,0,0,.06); */
-    background-color: none !important;
-    transform: translateY(-50%);
-    transition: background-color .3s;
-    content: "";
+  background: none !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 150%;
+  color: #a0aec0 !important;
+  text-transform: uppercase;
 }
 
- .site-layout-background  .table_header {
-    padding: 10px 0px 0px 5px;
-    margin-bottom: 5px;
-  }
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 1.6em;
+  /* background-color: rgba(0,0,0,.06); */
+  background: none !important;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+  content: "";
+}
 
-  td.ant-table-cell {
-    background: none !important;
-    padding: 3px  !important;
-  }
+.site-layout-background .table_header {
+  padding: 10px 0px 0px 5px;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: #2d3748;
+}
+
+td.ant-table-cell {
+  background: none !important;
+  padding: 0px -5px 1px 0px !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  color: #2d3748;
+}
+
+td.ant-table-cell .table_email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #718096;
+}
+
+td.ant-table-cell .table_post {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #718096;
+}
+
+td.ant-table-cell .edit_btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #718096;
+}
