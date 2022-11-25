@@ -2,7 +2,18 @@ import { Space, Table, Tag } from "antd";
 import React from "react";
 
 import CheckedIcon from "../../assets/img/checked.png";
-import ImgOne from "../../assets/img/img1.png"
+import ImgOne from "../../assets/img/img1.png";
+import ImgTwo from "../../assets/img/img2.png";
+import ImgThree from "../../assets/img/img3.png";
+import ImgFour from "../../assets/img/img4.png";
+import ImgFive from "../../assets/img/img5.png";
+import ImgSix from "../../assets/img/img6.png";
+
+import XdImg from "../../assets/img/xdImg.png";
+import AtlasianImg from "../../assets/img/atlasian.png";
+import SpotifyImg from "../../assets/img/spotify.png";
+import SlackImg from "../../assets/img/slack.png";
+import JiraImg from "../../assets/img/jira.png";
 
 import "./tables.css";
 
@@ -11,10 +22,10 @@ const columns = [
     title: "Author",
     dataIndex: "author",
     key: "author",
-    render: (text) => {
+    render: (text, row) => {
       return (
         <span style={{display: "flex", }}>
-        <img src={ImgOne} className="table_img" alt="" />{" "} <p>{text} <br /><small>johndoe</small></p>
+        <img src={row.imgData} className="table_img" alt="" />{" "} <p>{text} <br /><small>{row.email}</small></p>
         </span>
       )
   },
@@ -23,11 +34,11 @@ const columns = [
     title: "Function",
     dataIndex: "function",
     key: "function",
-    render: (text) => {
+    render: (role, position) => {
       return (
         <span>
-          {text}
-          Progemmer
+          {role}
+          <p>{position.post}</p>
         </span>
       )
     }
@@ -61,23 +72,62 @@ const data = [
   {
     key: "1",
     author: "Elaine Benes",
+    imgData: ImgOne,
+    email: "elaine@vandelay.com",
+    post: "Organization",
     function: "Manager",
     status: "Online",
     employed: "14/06/21",
   },
   {
     key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    tags: ["loser"],
+    author: "Sidra Holland",
+    imgData: ImgTwo,
+    email: "sidra@vandelay.com",
+    post: "Developer",
+    function: "Programmer",
+    status: "Offline",
+    employed: "14/06/21",
   },
   {
     key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
-    status: ["cool", "teacher"],
+    author: "Cosmo Kramer",
+    imgData: ImgThree,
+    email: "kramer@vandelay.com",
+    post: "Projects",
+    function: "Executive",
+    status: "Online",
+    employed: "14/06/21",
+  },
+  {
+    key: "4",
+    author: "Newman",
+    imgData: ImgFour,
+    email: "newman@usps.com",
+    post: "Organization",
+    function: "Manager",
+    status: "Online",
+    employed: "14/06/21",
+  },
+  {
+    key: "5",
+    name: "Frank Costanza",
+    imgData: ImgFive,
+    email: "frank@vandelay.com",
+    post: "Developer",
+    function: "Programmer",
+    status: "Online",
+    employed: "14/06/21",
+  },
+  {
+    key: "6",
+    author: "Art VanDelay",
+    imgData: ImgSix,
+    email: "art.ie@vandelay.com",
+    post: "UI/UX Design",
+    function: "Designer",
+    status: "Online",
+    employed: "14/06/21",
   },
 ];
 
@@ -86,7 +136,7 @@ const columnsOne = [
     title: "Name",
     dataIndex: "name",
     key: "name",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href="/">{text}</a>,
   },
   {
     title: "Age",
