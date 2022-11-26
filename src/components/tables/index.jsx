@@ -276,6 +276,7 @@ const TablesData = () => {
             fontWeight: 700,
             fontSize: "12px",
             lineHeight: "140%",
+            marginLeft: 5,
           }}
         >
           {" "}

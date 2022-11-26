@@ -60,11 +60,8 @@
 .sidebar__layout-menu .ant-menu-item svg {
   width: 18px;
   height: 18px;
-  /* background: #ffffff;
+  background: #ffffff;
   border-radius: 12px;
-  padding: 10px;
-  filter: invert(69%) sepia(34%) saturate(552%) hue-rotate(345deg)
-    brightness(99%) contrast(88%); */
 }
 
 .sidebar__layout-menu
@@ -83,12 +80,13 @@
 }
 
 .sidebar__layout-menu .ant-menu-item-selected svg {
-  filter: invert(69%) sepia(34%) saturate(552%) hue-rotate(345deg)
-    brightness(99%) contrast(88%);
+  /* filter: invert(69%) sepia(34%) saturate(552%) hue-rotate(345deg)
+    brightness(99%) contrast(88%); */
+
 }
 
 .sidebar__layout-menu .ant-menu-item:hover svg {
-  filter: invert(73%) sepia(47%) saturate(488%) hue-rotate(123deg)
+  filter: invert(100%) sepia(47%) saturate(488%) hue-rotate(123deg)
     brightness(92%) contrast(87%);
   border-radius: 5px;
 }
