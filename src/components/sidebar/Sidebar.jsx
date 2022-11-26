@@ -130,6 +130,7 @@ const Sidebar = ({ children }) => (
       <Content
         style={{
           margin: "0",
+          overflowY: "scroll"
         }}
       >
         <div
@@ -137,6 +138,7 @@ const Sidebar = ({ children }) => (
           style={{
             padding: 5,
             minHeight: 360,
+            marginTop: "-5px",
           }}
         >
           {children}

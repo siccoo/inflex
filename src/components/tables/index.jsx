@@ -1,4 +1,4 @@
-import { Space, Table, Tag } from "antd";
+import { Space, Table } from "antd";
 import React from "react";
 
 import CheckedIcon from "../../assets/img/checked.png";
@@ -14,6 +14,7 @@ import AtlasianImg from "../../assets/img/atlasian.png";
 import SpotifyImg from "../../assets/img/spotify.png";
 import SlackImg from "../../assets/img/slack.png";
 import JiraImg from "../../assets/img/jira.png";
+import EditIcon from "../../assets/img/editImg.png";
 
 import "./tables.css";
 
@@ -24,11 +25,15 @@ const columns = [
     key: "author",
     render: (text, row) => {
       return (
-        <span style={{display: "flex", marginBottom: "0px",  }}>
-        <img src={row.imgData} className="table_img" alt="" />{" "} <p>{text} <br /><small className="table_email">{row.email}</small></p>
+        <span style={{ display: "flex", marginBottom: "0px" }}>
+          <img src={row.imgData} className="table_img" alt="" />{" "}
+          <p>
+            {text} <br />
+            <small className="table_email">{row.email}</small>
+          </p>
         </span>
-      )
-  },
+      );
+    },
   },
   {
     title: "Function",
@@ -40,19 +45,42 @@ const columns = [
           {role}
           <p className="table_post">{position.post}</p>
         </span>
-      )
-    }
+      );
+    },
   },
   {
     title: "Status",
     key: "status",
     dataIndex: "status",
-    render: (text) => (
-      <>
-        <p style={{background: "#48BB78",
-borderRadius: "8px", adding: 5, width: "65px", textAlign: "center", color: "#FFFFFF"}}>{text}</p>
-      </> 
-    ),
+    render: (status) => {
+      if (status === "Online") {
+        return (
+          <span
+            style={{
+              background: "#48BB78",
+              borderRadius: "8px",
+              padding: "5px",
+              color: "#FFFFFF",
+            }}
+          >
+            {status}
+          </span>
+        );
+      } else {
+        return (
+          <span
+            style={{
+              background: "#CBD5E0",
+              borderRadius: "8px",
+              padding: "5px",
+              color: "#FFFFFF",
+            }}
+          >
+            {status}
+          </span>
+        );
+      }
+    },
   },
   {
     title: "Employed",
@@ -64,7 +92,9 @@ borderRadius: "8px", adding: 5, width: "65px", textAlign: "center", color: "#FFF
     key: "action",
     render: (_, record) => (
       <Space size="middle">
-        <a className="edit_btn" href="/">Edit</a>
+        <a className="edit_btn" href="/">
+          Edit
+        </a>
       </Space>
     ),
   },
@@ -137,45 +167,50 @@ const columnsOne = [
     title: "companies",
     dataIndex: "companies",
     key: "companies",
-    render: (text) => <a href="/">{text}</a>,
+    render: (text, row) => {
+      return (
+        <span style={{ display: "flex", marginBottom: "0px" }}>
+          <img src={row.imgData} className="tableOne_img" alt="" />{" "}
+          <p>{text}</p>
+        </span>
+      );
+    },
   },
   {
-    title: "Age",
-    dataIndex: "age",
-    key: "age",
+    title: "budget",
+    dataIndex: "budget",
+    key: "budget",
   },
   {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
+    title: "status",
+    dataIndex: "status",
+    key: "status",
   },
   {
-    title: "Tags",
-    key: "tags",
-    dataIndex: "tags",
-    render: (_, { tags }) => (
-      <>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? "geekblue" : "green";
-          if (tag === "loser") {
-            color = "volcano";
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
+    title: "completion",
+    key: "completion",
+    dataIndex: "completion",
+    render: (completion, row) => {
+      return (
+        <>
+          <p>{completion}</p>
+          {/* {completion.map((progrex) => {
+            if(completion === "60%") {
+              <div style={{height:"24px", width:"60%"}}></div>
+            }
+          })} */}
+        </>
+      );
+    },
   },
   {
-    title: "Action",
+    title: "",
     key: "action",
     render: (_, record) => (
       <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
+        <a href="/" className="edit_btn">
+          <img src={EditIcon} alt="edit" />
+        </a>
       </Space>
     ),
   },
@@ -183,24 +218,43 @@ const columnsOne = [
 const dataOne = [
   {
     key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-    tags: ["nice", "developer"],
+    companies: "Software Import/Export",
+    imgData: XdImg,
+    budget: "$14,000",
+    status: "Working",
+    completion: "60%",
   },
   {
     key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    tags: ["loser"],
+    companies: "Add Progress Track",
+    imgData: AtlasianImg,
+    budget: "$3,000",
+    status: "Canceled",
+    completion: "10%",
   },
   {
     key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
-    tags: ["cool", "teacher"],
+    companies: "Fix Platform Errors",
+    imgData: SlackImg,
+    budget: "Not set",
+    status: "Done",
+    completion: "100%",
+  },
+  {
+    key: "4",
+    companies: "Launch our Mobile App",
+    imgData: SpotifyImg,
+    budget: "$32,000",
+    status: "Done",
+    completion: "100%",
+  },
+  {
+    key: "5",
+    companies: "Add the New Pricing Page",
+    imgData: JiraImg,
+    budget: "$400",
+    status: "Working",
+    completion: "25%",
   },
 ];
 
@@ -208,13 +262,30 @@ const TablesData = () => {
   return (
     <>
       <div className="table">
-        <p className="table_header" >Author's Table</p>
+        <p className="table_header">Author's Table</p>
         <Table columns={columns} dataSource={data} />
       </div>
 
       <div className="table">
         <p className="table_header">Projects</p>
-        <span style={{padding: "10px 0px 0px 10px"}}> <img src={CheckedIcon} alt="" /> 30 done this month</span>
+        <span
+          style={{
+            padding: "10px 0px -30px 5px",
+            color: "#A0AEC0",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "12px",
+            lineHeight: "140%",
+          }}
+        >
+          {" "}
+          <img
+            src={CheckedIcon}
+            alt=""
+            style={{ width: "12px", height: "12px" }}
+          />{" "}
+          30 done this month
+        </span>
         <Table columns={columnsOne} dataSource={dataOne} />
       </div>
     </>

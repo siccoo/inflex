@@ -37,6 +37,13 @@
   margin-right: 5px;
 }
 
+.tableOne_img {
+    width: 20px;
+height: 20px;
+border-radius: 8px;
+margin-right: 5px;
+}
+
 th.ant-table-cell {
   background: none !important;
   font-family: "Helvetica";
