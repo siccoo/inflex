@@ -5,8 +5,6 @@
   width: 100%;
 }
 
-
-
 .site-layout-sub-header-background ul.breadcrumb {
   list-style: none;
   padding: 7px;
@@ -31,8 +29,8 @@
 }
 
 .site-layout-sub-header-background ul.breadcrumb li .breadcrumb_main {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none;
 }
 
 /* .site-layout-sub-header-background  .topbar_main {
@@ -85,8 +83,7 @@ align-items: flex-start;
   height: 39px;
 }
 
-.site-layout-sub-header-background 
-  ::placeholder {
+.site-layout-sub-header-background ::placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
