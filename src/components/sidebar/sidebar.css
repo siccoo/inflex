@@ -95,8 +95,8 @@ border-radius: 4px;
 }
 
 .sidebar__layout-menu .ant-menu-item:hover svg {
-  filter: invert(12%) sepia(8%) saturate(1996%) hue-rotate(125deg) brightness(85%) contrast(121%);
-background-color: green;
+  filter: invert(12%) sepia(-8%) saturate(1996%) hue-rotate(125deg) brightness(85%) contrast(101%);
+background-color: white;
 padding: 5px;
 border-radius: 4px;
 }
