@@ -1,4 +1,4 @@
-import { Space, Table } from "antd";
+import { Space, Table, Progress } from "antd";
 import React from "react";
 
 import CheckedIcon from "../../assets/img/checked.png";
@@ -193,12 +193,8 @@ const columnsOne = [
     render: (completion, row) => {
       return (
         <>
-          <p>{completion}</p>
-          {/* {completion.map((progrex) => {
-            if(completion === "60%") {
-              <div style={{height:"24px", width:"60%"}}></div>
-            }
-          })} */}
+          <span >{completion}%</span>
+          <Progress strokeColor="#4FD1C5" percent={completion}  />
         </>
       );
     },
@@ -222,7 +218,7 @@ const dataOne = [
     imgData: XdImg,
     budget: "$14,000",
     status: "Working",
-    completion: "60%",
+    completion: 60,
   },
   {
     key: "2",
@@ -230,7 +226,7 @@ const dataOne = [
     imgData: AtlasianImg,
     budget: "$3,000",
     status: "Canceled",
-    completion: "10%",
+    completion: 10,
   },
   {
     key: "3",
@@ -238,7 +234,7 @@ const dataOne = [
     imgData: SlackImg,
     budget: "Not set",
     status: "Done",
-    completion: "100%",
+    completion: 100,
   },
   {
     key: "4",
@@ -246,7 +242,7 @@ const dataOne = [
     imgData: SpotifyImg,
     budget: "$32,000",
     status: "Done",
-    completion: "100%",
+    completion: 100,
   },
   {
     key: "5",
@@ -254,19 +250,19 @@ const dataOne = [
     imgData: JiraImg,
     budget: "$400",
     status: "Working",
-    completion: "25%",
+    completion: 25,
   },
 ];
 
 const TablesData = () => {
   return (
     <>
-      <div className="table">
+      <div className="table-main">
         <p className="table_header">Author's Table</p>
         <Table columns={columns} dataSource={data} />
       </div>
 
-      <div className="table">
+      <div className="table-mainOne">
         <p className="table_header">Projects</p>
         <span
           style={{

@@ -54,7 +54,7 @@ const Sidebar = ({ children }) => (
       <Menu
         className="sidebar__layout-menu"
         mode="inline"
-        defaultSelectedKeys={["7"]}
+        defaultSelectedKeys={["1"]}
         items={[
           {
             key: "1",

@@ -2,14 +2,24 @@
   background: #f8f9fa;
 }
 
-.site-layout-background .table {
-  width: 1160px;
+.site-layout-background .table-main {
+  width: 1170px;
   /* height: 350px; */
   background: #ffffff;
   box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
   border-radius: 15px;
   /* margin-top: 15px; */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.site-layout-background .table-mainOne {
+  width: 1170px;
+  /* height: 350px; */
+  background: #ffffff;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+  /* margin-top: 15px; */
+  margin-bottom: 20px;
 }
 
 .site-layout-background .table p span {
@@ -112,4 +122,31 @@ td.ant-table-cell .edit_btn {
   font-size: 12px;
   line-height: 140%;
   color: #718096;
+}
+
+.table-mainOne .ant-progress-text {
+    display: none !important;
+    width: 2em;
+    /* margin-top: -8px; */
+    color: rgba(0,0,0,.85);
+    font-size: 1em;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+    word-break: normal;
+}
+
+.table-mainOne .ant-progress-bg {
+    height: 3px !important;
+}
+
+.table-main {
+  background: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.table-mainOne {
+  background: #FFFFFF;
+  margin-bottom: 30px;
 }
